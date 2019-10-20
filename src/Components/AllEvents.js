@@ -56,11 +56,11 @@ class AllEvents extends Component {
                 <div className="description"><i className="icon info circle"></i>{event.description}</div>
             </div>
             <div className="extra content">
-                <i className="icon comment"></i> {event.comments.items.length} comments
+                <i className="icon comment"></i> {event.comments.items.length} コメント
             </div>
             <button className="ui bottom attached button" onClick={this.handleDeleteClick.bind(this, event)}>
                 <i className="trash icon"></i>
-                Delete
+                削除
             </button>
         </Link>
     );
@@ -72,17 +72,17 @@ class AllEvents extends Component {
         return (
             <div>
                 <div className="ui clearing basic segment">
-                    <h1 className="ui header left floated">All Events</h1>
+                    <h1 className="ui header left floated">一覧</h1>
                     <button className="ui icon left basic button" onClick={this.handleSync} disabled={busy}>
                         <i aria-hidden="true" className={`refresh icon ${busy && "loading"}`}></i>
-                        Sync with Server
+                        同期する
                     </button>
                 </div>
                 <div className="ui link cards">
                     <div className="card blue">
                         <Link to="/newEvent" className="new-event content center aligned">
                             <i className="icon add massive"></i>
-                            <p>Create new event</p>
+                            <p>新規追加</p>
                         </Link>
                     </div>
                     {[].concat(events).sort((a, b) => a.when.localeCompare(b.when)).map(this.renderEvent)}

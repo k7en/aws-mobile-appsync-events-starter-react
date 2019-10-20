@@ -14,7 +14,7 @@ class ViewEvent extends Component {
 
         return (
             <div className={`ui container raised very padded segment ${loading ? 'loading' : ''}`}>
-                <Link to="/" className="ui button">Back to events</Link>
+                <Link to="/" className="ui button">一覧に戻る</Link>
                 <div className="ui items">
                     <div className="item">
                         {event && <div className="content">

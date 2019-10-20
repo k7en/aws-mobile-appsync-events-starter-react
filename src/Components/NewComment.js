@@ -52,7 +52,7 @@ class NewComment extends Component {
                 <button className={`ui blue labeled submit icon button ${loading ? 'loading' : ''}`}
                     disabled={loading} onClick={this.handleSubmit}>
                     <i className="icon edit"></i>
-                    Add Comment
+                    コメントする
                 </button>
             </form>
         );

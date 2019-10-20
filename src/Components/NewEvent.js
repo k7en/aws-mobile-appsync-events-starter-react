@@ -57,14 +57,14 @@ class NewEvent extends Component {
 
         return (
             <div className="ui container raised very padded segment">
-                <h1 className="ui header">Create an event</h1>
+                <h1 className="ui header">予定登録</h1>
                 <div className="ui form">
                     <div className="field required eight wide">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">タイトル</label>
                         <input type="text" id="name" value={event.name} onChange={this.handleChange.bind(this, 'name')} />
                     </div>
                     <div className="field required eight wide">
-                        <label htmlFor="when">When</label>
+                        <label htmlFor="when">何時</label>
                         <DatePicker
                             className="ui container"
                             customInput={<DateTimePickerCustomInput />}
@@ -82,18 +82,18 @@ class NewEvent extends Component {
                         />
                     </div>
                     <div className="field required eight wide">
-                        <label htmlFor="where">Where</label>
+                        <label htmlFor="where">どこで</label>
                         <input type="text" id="where" value={event.where} onChange={this.handleChange.bind(this, 'where')} />
                     </div>
                     <div className="field required eight wide">
-                        <label htmlFor="description">Description</label>
+                        <label htmlFor="description">内容</label>
                         <textarea name="description" id="description" rows="10" value={event.description}
                             onChange={this.handleChange.bind(this, 'description')}></textarea>
                     </div>
                     <div className="ui buttons">
-                        <Link to="/" className="ui button">Cancel</Link>
+                        <Link to="/" className="ui button">キャンセル</Link>
                         <div className="or"></div>
-                        <button className="ui positive button" onClick={this.handleSave}>Save</button>
+                        <button className="ui positive button" onClick={this.handleSave}>保存</button>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@ class EventComments extends Component {
             <div className="ui items">
                 <div className="item">
                     <div className="ui comments">
-                        <h4 className="ui dividing header">Comments</h4>
+                        <h4 className="ui dividing header">コメント</h4>
                         {[].concat(items).sort((a, b) => a.createdAt.localeCompare(b.createdAt)).map(this.renderComment)}
                         <NewComment eventId={eventId} />
                     </div>
